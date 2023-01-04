@@ -1,0 +1,692 @@
+/*--------------------------------------------------------------------------------------
+Theme Name: FF INFO 
+Theme URI: http://ffinfo.com.bd
+Author URI: http://techitbd.com/about.html
+Description: best freedom fighter management
+Author: MONAYEM 
+Version: 1.0
+----------------------------------------------------------------------------------------*/
+
+
+/*--------------------
+   1. FONTS
+----------------------*/
+
+@font-face 
+{
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.eot') format('embedded-opentype'),
+         url('../fonts/Lato-Regular.woff2') format('woff2'),
+         url('../fonts/Lato-Regular.woff') format('woff'),
+         url('../fonts/Lato-Regular.ttf') format('truetype'),
+         url('../fonts/Lato-Regular.svg') format('svg'),
+         url('../fonts/Lato-Regular.otf')  format('opentype');                
+}
+
+@font-face 
+{
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+         url('../fonts/OpenSans-Bold.woff') format('woff'),
+         url('../fonts/OpenSans-Bold.ttf') format('truetype'),
+         url('../fonts/OpenSans-Bold.svg') format('svg'),
+         url('../fonts/OpenSans-Bold.otf')  format('opentype');                
+}
+
+
+/*--------------------
+   2. BASE CSS
+----------------------*/
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+.aligncenter {
+    display: table;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    outline: none;
+}
+
+a:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: #333333;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: #555555;
+    font-weight: 400;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.blue-bg {
+    background-color: #3350b9;
+}
+
+.btn {
+    border-radius: 0;
+    margin: 0 6px;
+    padding: 10px 28px;
+    font-weight: 700;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.blue-btn {
+    background-color: #4b67ce;
+    color: #ddd;
+}
+
+.blue-btn:hover {
+    background-color: #314eb4;
+    color: #ffffff;
+}
+
+.red-btn {
+    background-color: #EF0000;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.red-btn:hover {
+    background-color: #da2525;
+    color: #ffffff;
+}
+
+.heading {
+    margin: 10px;
+    position: relative;
+}
+
+.heading h2 {
+    font-family: Lato;
+    font-size: 20px;
+    color: #076B07;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    margin: 0 auto;
+    display: table;
+    padding-bottom: 10px;
+}
+
+.heading h2::before {
+    content: "";
+    width: 250px;
+    height: 2px;
+    bottom: 0px;
+    position: absolute;
+    left: 20%;
+    background: red;
+}
+
+
+/*--------------------
+   3. HEADER
+----------------------*/
+
+header {
+    background: #EF0000;
+    border-bottom: 5px solid green;
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 100;
+      -moz-transition: all 0.5s ease-in ;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+header .logo {
+    margin: 0px;
+    padding: 0px;
+}
+
+header .logo a {
+    text-decoration: none;
+}
+
+header .logo a img {
+    float: left;
+    padding-right: 5px;
+}
+
+header .logo a h2 {
+    font-family: Lato;
+    font-size: 23px;
+    padding-top: 38px;
+    color: #fff;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+header .logo a h2:hover {
+    color: #04851B;
+}
+
+header.sticky {
+    background: #EF0000;
+    z-index: 101;
+    height: 80px;
+    -moz-transition: all 0.5s ease-in ;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+header.sticky .logo img {
+    height: 75px;
+}
+
+header.sticky .logo a h2 {
+    padding-top: 20px;
+}
+
+header.sticky .navbar-default .navbar-nav li a {
+    padding-top: 10px;
+}
+
+
+/* Navbar */
+
+.navbar-default {
+    background: none;
+    border: none;
+    margin: 15px 0px;
+}
+
+.navbar-default .navbar-nav li a {
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: bold;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 25px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff !important;
+    border-bottom: 3px solid green !important;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff !important;
+    border-bottom: 2px solid green !important;
+}
+
+
+/* slider */
+
+.slider {
+    margin-top: 7%;
+}
+
+
+/* solder */
+
+.solder-section{
+    margin-top:30px;
+}
+
+.solder-slider{
+    margin-top:30px;
+}
+
+
+.solder-box {
+    width: 180px;
+    height: 180px;
+}
+
+.solder-box img{
+    border-radius: 5px;
+}
+
+
+/*--------------------
+   4. HISTORY
+----------------------*/
+.history-section
+{
+    margin:10% 0%;
+}
+
+.history-section  .heading h2::before
+{
+    left:0%;
+    width: 178px;
+}
+
+
+.history-section h4 
+{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+.history-section h4::before 
+{
+    content: "";
+    width: 285px;
+    height: 2px;
+    position: absolute;
+    background: red;
+    top:12%;
+}
+
+.history-section h5 
+{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.history-section h5::before 
+{
+    content: "";
+    width: 214px;
+    height: 2px;
+    position: absolute;
+    background: red;
+    top:12%;
+}
+
+.history-section p 
+{
+    padding:10px 0px;
+    text-align: justify;
+}
+
+/*-----------------------------
+   6. FREEDOM FIGHTER SECTION
+------------------------------*/
+
+.freedom-fighter-section{
+    margin-top: 10%;
+}
+
+.freedom-fighter-section .heading h2::before 
+{
+    left:0%;
+    width: 235px ;
+}
+
+/*--------------------
+   7. SEARCH SECTION
+----------------------*/
+.search-section{
+    margin-top:10%;
+}
+
+.search-section .heading h2::before 
+{
+    left:0%;
+    width: 280px ;
+}
+.search-section-form
+{
+    margin:10px 0px;
+}
+
+
+/*--------------------
+   8. CONTACT US
+----------------------*/
+.contact-section{
+    margin-top:10%;
+}
+
+.contact-section .heading h2::before
+{
+    left:0%;
+    width:127px;
+}
+
+.contact-item
+{
+    margin:30px 0px;
+}
+
+.contact-info address ul{
+    margin:0px;
+    padding:0px;
+
+}
+
+.contact-info address ul li{
+    margin:0px;
+    padding:30px 5px 0px;
+    list-style:none;
+    
+}
+.contact-info address ul li i 
+{
+   float:left;
+   width:12.9%;
+   font-size: 16px;
+    background-color:#EF0000;
+    color:#fff;     
+    transition:all 0.3s ease-in;
+    -moz-transition:all 0.3s ease-in;
+    -webkit-transition:all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+    padding:12px 15px;
+}
+
+.contact-info address ul li i:hover
+{
+    background: green;
+    padding:12px 15px;
+}
+
+
+.contact-info address ul li span 
+{
+    padding-left: 20px;
+}
+
+
+/*--------------------
+   9. FOOTER
+----------------------*/
+
+.footer-main {
+    background: url('../img/footer_bg.jpg') ;
+    background-repeat:no-repeat;
+    border-top: 5px solid red;
+    padding: 10px 0px;
+    position: static;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% auto;
+}
+
+.footer-main .footer-title h4 {
+    padding: 10px 0px;
+    font-family: OpenSans;
+    color: #fff;
+    position: relative;
+    font-weight: normal;
+}
+
+.footer-main .footer-title h4::before {
+    content: "";
+    height: 2px;
+    width: 18%;
+    background: #EF0000;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+
+.footer-main .footer-item ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer-main .footer-item ul li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.footer-main .footer-item ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: OpenSans ;
+    font-weight: normal;
+    color: #fff;
+    padding-bottom: 10px;
+    display: block;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 80%;
+}
+
+.footer-main .footer-item ul li a::before{
+    content: "\f0da";
+    font-family: fontawesome;
+    margin-right: 10px;
+    transition:all 0.2s ease;
+}
+
+
+.footer-main .footer-item ul li a:hover {
+    color: #EF0000;
+}
+
+
+.single-events {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.single-events .event-date {
+    background-color: #EF0000;
+    color:#fff;
+    float: left;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: OpenSans ;
+    height: 50px;
+    line-height: 1;
+    margin-right: 16px;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.single-events .event-date span {
+    display: block;
+     font-family: Lato ;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.single-events h4 {
+    color: #ffffff;
+    font-family: Lato ;
+    font-size: 14px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.single-events p {
+    color: #ffffff;
+}
+
+.single-events:hover .event-date {
+    background-color: #ffffff;
+    color: #db2727;
+}
+
+
+.single-info {
+    margin: 14px 0;
+}
+
+
+.single-info a {
+    border: 1px solid #EF0000;
+    color: #ffffff;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 10px 30px 10px 50px;
+    position: relative;
+}
+
+.single-info span {
+    background-color: #EF0000;
+    display: inline-block;
+    font-size: 20px;
+    height: 40px;
+    left: -1px;
+    line-height: 1.8;
+    position: absolute;
+    text-align: center;
+    top: -4px;
+    width: 40px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.single-info a:hover span {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: #ffffff;
+    color: #d92728;
+}
+
+
+.footer-bottom {
+    background: #EF0000;
+    padding: 20px 0px;
+}
+
+.footer-bottom-item p {
+    color: #fff;
+}
+
+.footer-bottom .social-icon ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-bottom .social-icon ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    float: left;
+}
+
+.social-list a {
+    background-color: green;
+    border-radius: 50%;
+    color: #ffffff;
+    display: inline-block;
+    height: 35px;
+    line-height: 2.4;
+    margin-right: 10px;
+    text-align: center;
+    width: 35px;
+    transition:all 0.3s ease-in;
+    text-decoration: none;
+}
+
+.social-list a:hover{ 
+    color:red;
+    background: #ffffff;
+}
+
+
+.footer-bottom .social-icon ul li a:hover {
+    color: #EF0000;
+}
+
+.scroll-up{
+    background: green;
+    bottom: 20px;
+    color:#fff;
+    font-size: 18px;
+    height:40px;
+    line-height: 2;
+    right: 20px;
+    width: 40px;
+    position: fixed;
+    text-align: center;
+    display: block;
+    border-radius: 2px;
+}
+
+
+
+
+/* Responsive section */
+
+@media(max-width: 1199px){
+
+  header.sticky {
+   
+   height: auto ;
+}
+
+
+}
